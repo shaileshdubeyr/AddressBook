@@ -25,11 +25,14 @@ public class ContactDetailsMain {
 					break;
 				case 'E':
 					System.out.println("Enter the name to edit");
-					String editDetails = addPersonDetails.scanData.nextLine();
 					addPersonDetails.editDetails();
 					break;
+				case 'D':
+					System.out.println("Enter the name to edit");
+					addPersonDetails.deleteDetails();
+					break;
 				default:
-					System.out.println("data successfulentered");
+					System.out.println("you have not perform any operation");
 					break;
 				}
 

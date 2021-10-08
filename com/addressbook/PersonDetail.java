@@ -68,7 +68,7 @@ ArrayList<String> contatctDetails = new <String>ArrayList(4);
 		contatctDetails.add(phoneNumber);
 	}
 	
-	public String getZipCode() {
+	public String  getZipCode() {
 		return zipCode;
 	}
 	

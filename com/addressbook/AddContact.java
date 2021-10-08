@@ -34,7 +34,7 @@ public class AddContact extends PersonDetail {
 	}
 
 	public void editDetails() {
-		Iterator<String> checkName = contatctDetails.iterator();
+		
 		String name = scanData.nextLine();
 		int index = contatctDetails.indexOf(name);
 		while (true) {
@@ -53,6 +53,33 @@ public class AddContact extends PersonDetail {
 				contatctDetails.set(++index, scanData.nextLine());
 				System.out.println("enter the email");
 				contatctDetails.set(++index, scanData.nextLine());
+				break;
+			} else {
+				System.out.println("not match any details");
+				break;
+			}
+		}
+	}
+	
+	public void deleteDetails() {
+		String name = scanData.nextLine();
+		int index = contatctDetails.indexOf(name);
+		while (true) {
+			if (contatctDetails.contains(name)) {
+				System.out.println("enter the first name");
+				contatctDetails.remove(index);
+				System.out.println("enter lastname");
+				contatctDetails.remove(++index);
+				System.out.println("enter the address");
+				contatctDetails.remove(++index);
+				System.out.println("enter the state");
+				contatctDetails.remove(++index);
+				System.out.println("enter the phonenumber");
+				contatctDetails.remove(++index);
+				System.out.println("enter the Zipcode");
+				contatctDetails.remove(++index);
+				System.out.println("enter the email");
+				contatctDetails.remove(++index);
 				break;
 			} else {
 				System.out.println("not match any details");
