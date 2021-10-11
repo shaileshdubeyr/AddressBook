@@ -1,11 +1,8 @@
 package com.addressbook;
 
-import java.util.*;
 import java.util.ArrayList;
 
 public abstract class PersonDetail {
-ArrayList<String> contatctDetails = new <String>ArrayList(4);
-	
 	private String firstName;
 	private String lastName;
 	private String address;
@@ -20,7 +17,7 @@ ArrayList<String> contatctDetails = new <String>ArrayList(4);
 	
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
-		contatctDetails.add(firstName);
+		//contatctDetails.add(firstName);
 	}
 	
 	public String getLastName() {
@@ -29,7 +26,7 @@ ArrayList<String> contatctDetails = new <String>ArrayList(4);
 	
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
-		contatctDetails.add(lastName);
+		//contatctDetails.add(lastName);
 	}
 	
 	public String getAddress() {
@@ -38,7 +35,7 @@ ArrayList<String> contatctDetails = new <String>ArrayList(4);
 	
 	public void setAddress(String address) {
 		this.address = address;
-		contatctDetails.add(address);
+		//contatctDetails.add(address);
 	}
 	
 	public String getState() {
@@ -47,7 +44,7 @@ ArrayList<String> contatctDetails = new <String>ArrayList(4);
 	
 	public void setState(String state) {
 		this.state = state;
-		contatctDetails.add(state);
+		//contatctDetails.add(state);
 	}
 	
 	public String getE_mail() {
@@ -56,7 +53,7 @@ ArrayList<String> contatctDetails = new <String>ArrayList(4);
 	
 	public void setE_mail(String e_mail) {
 		this.e_mail = e_mail;
-		contatctDetails.add(e_mail);
+		//contatctDetails.add(e_mail);
 	}
 	
 	public String getPhoneNumber() {
@@ -65,7 +62,7 @@ ArrayList<String> contatctDetails = new <String>ArrayList(4);
 	
 	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
-		contatctDetails.add(phoneNumber);
+		//contatctDetails.add(phoneNumber);
 	}
 	
 	public String  getZipCode() {
@@ -74,7 +71,7 @@ ArrayList<String> contatctDetails = new <String>ArrayList(4);
 	
 	public void setZipCode(String zipCode) {
 		this.zipCode = zipCode;
-		contatctDetails.add(zipCode);
+		//contatctDetails.add(zipCode);
 	}
 
 	@Override
