@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class AddContact extends PersonDetail {
 	Scanner scanData = new Scanner(System.in);
 
-	public void setContactDetails() {
+	public void setContactDetails()  {
 		System.out.println("enter the First Name");
 		setFirstName(scanData.nextLine());
 		System.out.println("enter the Last Name");

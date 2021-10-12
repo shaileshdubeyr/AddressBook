@@ -17,7 +17,6 @@ public abstract class PersonDetail {
 	
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
-		//contatctDetails.add(firstName);
 	}
 	
 	public String getLastName() {
@@ -26,7 +25,6 @@ public abstract class PersonDetail {
 	
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
-		//contatctDetails.add(lastName);
 	}
 	
 	public String getAddress() {
@@ -35,7 +33,6 @@ public abstract class PersonDetail {
 	
 	public void setAddress(String address) {
 		this.address = address;
-		//contatctDetails.add(address);
 	}
 	
 	public String getState() {
@@ -44,7 +41,6 @@ public abstract class PersonDetail {
 	
 	public void setState(String state) {
 		this.state = state;
-		//contatctDetails.add(state);
 	}
 	
 	public String getE_mail() {
@@ -53,7 +49,6 @@ public abstract class PersonDetail {
 	
 	public void setE_mail(String e_mail) {
 		this.e_mail = e_mail;
-		//contatctDetails.add(e_mail);
 	}
 	
 	public String getPhoneNumber() {
@@ -62,7 +57,6 @@ public abstract class PersonDetail {
 	
 	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
-		//contatctDetails.add(phoneNumber);
 	}
 	
 	public String  getZipCode() {
@@ -71,7 +65,6 @@ public abstract class PersonDetail {
 	
 	public void setZipCode(String zipCode) {
 		this.zipCode = zipCode;
-		//contatctDetails.add(zipCode);
 	}
 
 	@Override
