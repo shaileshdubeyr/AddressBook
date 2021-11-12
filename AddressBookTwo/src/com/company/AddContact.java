@@ -163,7 +163,6 @@ public class AddContact extends PersonDetail {
         }
     }
 
-    // Use CSVIO.
     public static void writeToFileInOpenCsv(Hashtable<Integer, ArrayList<AddContact>> contactDetails) {
         try {
             FileWriter fileWriter = new FileWriter("AddressBook.csv");
