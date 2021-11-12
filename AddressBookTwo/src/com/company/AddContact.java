@@ -1,5 +1,8 @@
 package com.company;
 
+import com.opencsv.CSVReader;
+import com.opencsv.CSVWriter;
+
 import java.io.*;
 import java.util.*;
 import java.util.stream.*;
@@ -149,10 +152,10 @@ public class AddContact extends PersonDetail {
             System.out.println(hashtableCopy.get(i).stream().sorted(Comparator.comparing(AddContact::getCity).thenComparing(AddContact::getState)).collect(Collectors.toList()));
     }
 
-    public void writeIntoFile(Hashtable<Integer, ArrayList<AddContact>> hashtableCopy) throws IOException, ClassNotFoundException {
+    public static void writeToFile(Hashtable<Integer, ArrayList<AddContact>> contactDetails) {
         try {
-            FileWriter fileWriter = new FileWriter("IOoperation.JSON");
-            String stream = String.valueOf(hashtableCopy);
+            FileWriter fileWriter = new FileWriter("AddressBook.txt");
+            String stream = String.valueOf(contactDetails);
             fileWriter.write(stream);
             fileWriter.close();
         } catch (Exception e) {
@@ -160,13 +163,44 @@ public class AddContact extends PersonDetail {
         }
     }
 
+    // Use CSVIO.
+    public static void writeToFileInOpenCsv(Hashtable<Integer, ArrayList<AddContact>> contactDetails) {
+        try {
+            FileWriter fileWriter = new FileWriter("AddressBook.csv");
+            CSVWriter csvWriter = new CSVWriter(fileWriter);
+            String[] array = new String[contactDetails.size()];
+            for (int i = 0; i < array.length; i++) {
+                array[i] = String.valueOf(contactDetails.get(i));
+            }
+            csvWriter.writeNext(array);
+            csvWriter.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
     public static void readFromFile() {
         try {
-            FileReader fileReader = new FileReader("IOoperation.JSON");
+            FileReader fileReader = new FileReader("AddressBook.csv");
             int i;
             while ((i = fileReader.read()) != -1) {
                 System.out.print((char) i);
             }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void readFromFileInOpenCsv() {
+        try {
+            FileReader fileReader = new FileReader("AddressBook.csv");
+            CSVReader csvReader = new CSVReader(fileReader);
+            String[] strings;
+            while ((strings = csvReader.readNext()) != null) {
+                for (String token : strings)
+                    System.out.print(token);
+            }
+            csvReader.close();
         } catch (Exception e) {
             e.printStackTrace();
         }

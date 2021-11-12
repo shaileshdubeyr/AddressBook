@@ -66,7 +66,8 @@ public class ContactDetailsMain {
                 }
             }
             hashTable.put(i, addDetailsToArryList);
-            addPersonDetails.writeIntoFile(hashTable);
+            addPersonDetails.writeToFile(hashTable);
+            addPersonDetails.writeToFileInOpenCsv(hashTable);
             if (hashTable.size() == addressBookLimit) {
                 System.out.println("Do you wnat to search the persons who belong to this state or city y :- yes N :- no ");
                 char searchAcrossAddressbook = inputCharater();
@@ -79,6 +80,7 @@ public class ContactDetailsMain {
             addPersonDetails.sortWithCityAndState(hashTable);
             System.out.println("Reading from file");
             addPersonDetails.readFromFile();
+            addPersonDetails.readFromFileInOpenCsv();
         }
         for (int i = ONE; i <= hashTable.size(); i++) {
             System.out.println("Address book " + i);
